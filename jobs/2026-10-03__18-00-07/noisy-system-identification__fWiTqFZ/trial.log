@@ -1,0 +1,52 @@
+Skipping image OS validation for hb__1941d3fd6743b7c56d8fad0d161ff887: docker inspect returned 1
+Collecting main service artifacts
+compose cp failed; retrying download with engine cp: Docker compose command failed for environment noisy-system-identification. Command: docker compose --project-name noisy-system-identification__fwitqfz__env --project-directory /home/wesonga/Desktop/noisy-system-identification/environment -f /tmp/tmp443gfowz/noisy-system-identification__fWiTqFZ__env-docker-compose-resources.json -f /home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /tmp/tmptd2pfyh6/docker-compose-environment.json -f /tmp/tmpyx6qg4jh/docker-compose-mounts.json cp main:/app/result.json jobs/2026-10-03__18-00-07/noisy-system-identification__fWiTqFZ/artifacts/app/result.json. Return code: 1. Stdout:  noisy-system-identification__fwitqfz__env-main-1 copy noisy-system-identification__fwitqfz__env-main-1:/app/result.json to jobs/2026-10-03__18-00-07/noisy-system-identification__fWiTqFZ/artifacts/app/result.json Copying
+invalid output path: directory "/home/wesonga/Desktop/noisy-system-identification/environment/jobs/2026-10-03__18-00-07/noisy-system-identification__fWiTqFZ/artifacts/app" does not exist
+. Stderr: None. 
+Failed to download artifact '/app/result.json' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "/home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/trial/artifact_handler.py", line 313, in _download_artifact
+    await source_env.service_download_file(
+    ...<3 lines>...
+    )
+  File "/home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/environments/docker/docker.py", line 1205, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "/home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/environments/docker/docker.py", line 1190, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "/home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/environments/docker/docker_unix.py", line 256, in download_file
+    await self._download_via_engine_cp(source_path, target_path, service)
+  File "/home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/environments/docker/docker_unix.py", line 235, in _download_via_engine_cp
+    await self._engine_cp(f"{container}:{container_path}", str(target_path))
+  File "/home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/environments/docker/docker_unix.py", line 226, in _engine_cp
+    raise RuntimeError(
+        f"Engine cp failed ({source!r} -> {destination!r}): {output}"
+    )
+RuntimeError: Engine cp failed ('a27ff74ce321:/app/result.json' -> 'jobs/2026-10-03__18-00-07/noisy-system-identification__fWiTqFZ/artifacts/app/result.json'): Error response from daemon: Could not find the file /app/result.json in container a27ff74ce321
+
+compose cp failed; retrying download with engine cp: Docker compose command failed for environment noisy-system-identification. Command: docker compose --project-name noisy-system-identification__fwitqfz__env --project-directory /home/wesonga/Desktop/noisy-system-identification/environment -f /tmp/tmp443gfowz/noisy-system-identification__fWiTqFZ__env-docker-compose-resources.json -f /home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /tmp/tmptd2pfyh6/docker-compose-environment.json -f /tmp/tmpyx6qg4jh/docker-compose-mounts.json cp main:/app/diagnostics.json jobs/2026-10-03__18-00-07/noisy-system-identification__fWiTqFZ/artifacts/app/diagnostics.json. Return code: 1. Stdout:  noisy-system-identification__fwitqfz__env-main-1 copy noisy-system-identification__fwitqfz__env-main-1:/app/diagnostics.json to jobs/2026-10-03__18-00-07/noisy-system-identification__fWiTqFZ/artifacts/app/diagnostics.json Copying
+invalid output path: directory "/home/wesonga/Desktop/noisy-system-identification/environment/jobs/2026-10-03__18-00-07/noisy-system-identification__fWiTqFZ/artifacts/app" does not exist
+. Stderr: None. 
+Failed to download artifact '/app/diagnostics.json' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "/home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/trial/artifact_handler.py", line 313, in _download_artifact
+    await source_env.service_download_file(
+    ...<3 lines>...
+    )
+  File "/home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/environments/docker/docker.py", line 1205, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "/home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/environments/docker/docker.py", line 1190, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "/home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/environments/docker/docker_unix.py", line 256, in download_file
+    await self._download_via_engine_cp(source_path, target_path, service)
+  File "/home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/environments/docker/docker_unix.py", line 235, in _download_via_engine_cp
+    await self._engine_cp(f"{container}:{container_path}", str(target_path))
+  File "/home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/environments/docker/docker_unix.py", line 226, in _engine_cp
+    raise RuntimeError(
+        f"Engine cp failed ({source!r} -> {destination!r}): {output}"
+    )
+RuntimeError: Engine cp failed ('a27ff74ce321:/app/diagnostics.json' -> 'jobs/2026-10-03__18-00-07/noisy-system-identification__fWiTqFZ/artifacts/app/diagnostics.json'): Error response from daemon: Could not find the file /app/diagnostics.json in container a27ff74ce321
+
+Skipping image OS validation for hb__7a0ca95687d2c938e73ff68c40ee9290: docker inspect returned 1
+docker compose cp failed; retrying upload with tar stream: Docker compose command failed for environment noisy-system-identification. Command: docker compose --project-name noisy-system-identification__fwitqfz__verifier__trial --project-directory /home/wesonga/Desktop/noisy-system-identification/tests -f /tmp/tmp71dosl3c/noisy-system-identification__fWiTqFZ__verifier__trial-docker-compose-resources.json -f /home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /tmp/tmpbi7e26xt/docker-compose-environment.json -f /tmp/tmpasf8evu9/docker-compose-mounts.json -f /home/wesonga/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/environments/docker/docker-compose-egress-control.yaml -f /tmp/tmp283ext06/docker-compose-egress-control-services.json cp jobs/2026-10-03__18-00-07/noisy-system-identification__fWiTqFZ/artifacts/logs/artifacts/. main:/logs/artifacts. Return code: 1. Stdout:  noisy-system-identification__fwitqfz__verifier__trial-main-1 copy jobs/2026-10-03__18-00-07/noisy-system-identification__fWiTqFZ/artifacts/logs/artifacts/. to noisy-system-identification__fwitqfz__verifier__trial-main-1:/logs/artifacts Copying
+lstat /home/wesonga/Desktop/noisy-system-identification/tests/jobs: no such file or directory
+. Stderr: None. 

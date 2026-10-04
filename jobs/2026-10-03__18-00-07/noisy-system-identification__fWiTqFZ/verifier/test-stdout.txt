@@ -1,0 +1,53 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 2 items
+
+test_solution.py FF                                                      [100%]
+
+=================================== FAILURES ===================================
+__________________________ test_result_schema_and_fit __________________________
+
+    def test_result_schema_and_fit():
+>       r=load('result.json')
+          ^^^^^^^^^^^^^^^^^^^
+
+test_solution.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'result.json'
+
+    def load(name):
+        p=ROOT/name
+>       assert p.is_file(), f'missing {name}'
+E       AssertionError: missing result.json
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = PosixPath('/app/result.json').is_file
+
+test_solution.py:15: AssertionError
+__________________________ test_diagnostics_evidence ___________________________
+
+    def test_diagnostics_evidence():
+>       d=load('diagnostics.json')
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_solution.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'diagnostics.json'
+
+    def load(name):
+        p=ROOT/name
+>       assert p.is_file(), f'missing {name}'
+E       AssertionError: missing diagnostics.json
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = PosixPath('/app/diagnostics.json').is_file
+
+test_solution.py:15: AssertionError
+=========================== short test summary info ============================
+FAILED test_solution.py::test_result_schema_and_fit - AssertionError: missing...
+FAILED test_solution.py::test_diagnostics_evidence - AssertionError: missing ...
+============================== 2 failed in 0.08s ===============================

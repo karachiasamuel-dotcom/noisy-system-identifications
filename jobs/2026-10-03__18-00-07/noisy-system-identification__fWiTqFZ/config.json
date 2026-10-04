@@ -1,0 +1,11 @@
+{
+    "task": {
+        "path": "."
+    },
+    "trial_name": "noisy-system-identification__fWiTqFZ",
+    "trials_dir": "jobs/2026-10-03__18-00-07",
+    "agent": {
+        "name": "nop"
+    },
+    "job_id": "217c36e8-c36a-4434-88b4-0a8298ff1cef"
+}

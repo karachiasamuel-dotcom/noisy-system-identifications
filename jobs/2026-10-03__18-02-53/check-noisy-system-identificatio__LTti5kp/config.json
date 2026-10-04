@@ -1,0 +1,12 @@
+{
+    "task": {
+        "path": "/tmp/harbor-check-se6yj8f0/check-noisy-system-identification"
+    },
+    "trial_name": "check-noisy-system-identificatio__LTti5kp",
+    "trials_dir": "jobs/2026-10-03__18-02-53",
+    "agent": {
+        "name": "claude-code",
+        "model_name": "anthropic/claude-opus-4-8"
+    },
+    "job_id": "a18b38e4-a633-4581-86b6-49fba01da0c3"
+}

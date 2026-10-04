@@ -1,0 +1,10 @@
+{
+  "results": [
+    {
+      "checks": {},
+      "cost_usd": null,
+      "task_name": "",
+      "error": "Check trial failed with AgentSetupTimeoutError: Agent setup timed out after 360.0 seconds\nTrial artifacts: jobs/2026-10-03__18-02-53/check-noisy-system-identificatio__LTti5kp"
+    }
+  ]
+}

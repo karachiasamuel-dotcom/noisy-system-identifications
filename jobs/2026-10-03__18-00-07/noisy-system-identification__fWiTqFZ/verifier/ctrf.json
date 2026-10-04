@@ -1,0 +1,44 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 0,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791039647.3440177,
+            "stop": 1791039647.425503
+        },
+        "tests": [
+            {
+                "name": "test_solution.py::test_result_schema_and_fit",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0010632739999891783,
+                "start": 1791039647.3989308,
+                "stop": 1791039647.4208496,
+                "retries": 0,
+                "file_path": "test_solution.py",
+                "trace": "def test_result_schema_and_fit():\n>       r=load('result.json')\n          ^^^^^^^^^^^^^^^^^^^\n\ntest_solution.py:22: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'result.json'\n\n    def load(name):\n        p=ROOT/name\n>       assert p.is_file(), f'missing {name}'\nE       AssertionError: missing result.json\nE       assert False\nE        +  where False = is_file()\nE        +    where is_file = PosixPath('/app/result.json').is_file\n\ntest_solution.py:15: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_solution.py::test_diagnostics_evidence",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0007595910001327866,
+                "start": 1791039647.4211504,
+                "stop": 1791039647.4252295,
+                "retries": 0,
+                "file_path": "test_solution.py",
+                "trace": "def test_diagnostics_evidence():\n>       d=load('diagnostics.json')\n          ^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_solution.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nname = 'diagnostics.json'\n\n    def load(name):\n        p=ROOT/name\n>       assert p.is_file(), f'missing {name}'\nE       AssertionError: missing diagnostics.json\nE       assert False\nE        +  where False = is_file()\nE        +    where is_file = PosixPath('/app/diagnostics.json').is_file\n\ntest_solution.py:15: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

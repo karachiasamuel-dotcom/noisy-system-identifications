@@ -1,0 +1,47 @@
+schema_version = "1.4"
+
+artifacts = ["/app/result.json", "/app/diagnostics.json"]
+
+[task]
+name = "afterquery/noisy-system-identification"
+description = "Identify and robustly fit a low-order dynamical system from noisy multi-experiment time-series measurements."
+authors = [{ name = "WESONGA GODFREY", email = "wesongagodfrey60@gmail.com" }]
+keywords = ["system identification", "signal processing", "dynamical systems", "robust fitting"]
+
+[metadata]
+author_name = "WESONGA GODFREY"
+author_email = "wesongagodfrey60@gmail.com"
+author_organization = "Independent Researcher"
+author_profile = "https://github.com/WesongaGodfrey254"
+research_advisor = ""
+referred_by = ""
+conflicts_of_interest = "None"
+domain = "engineering-sciences"
+field = "electrical-engineering"
+subfield = "signal processing and continuous-time system identification"
+category = "Science"
+subcategory = "Electrical & Computer Engineering"
+tags = ["system-identification", "signal-processing", "dynamical-systems", "robust-estimation"]
+expert_time_estimate_hours = 8
+relevant_experience = "Independent researcher with hands-on experience building Python data-analysis and engineering software projects, including numerical processing of measured and simulated signals."
+difficulty_explanation = "The data are synthetic, but they are generated independently from the reference solution using a fixed scientific model and seed. Difficulty comes from identifying the model from multiple differently sampled experiments, handling deliberately corrupted observations without discarding the datasets wholesale, jointly estimating coupled physical parameters, and validating the result across experiments."
+solution_explanation = "The reference solution uses observable excitation and response data, robust nonlinear least squares over all experiments, multiple data-driven initializations, and a second refinement pass over all samples. It then computes residual and uncertainty diagnostics and writes the two required JSON artifacts."
+verification_explanation = "The verifier is offline and keeps the independently generated parameter values in the tests image rather than the agent image. It checks the selected model family, numerical parameter tolerances, finite and nonnegative uncertainty values, anomaly count, global validation error, and per-experiment diagnostics for all five datasets. Ground truth comes from the independent synthetic-data generator in authoring/provenance, not from the reference solver."
+
+[verifier]
+timeout_sec = 1800.0
+environment_mode = "separate"
+
+[verifier.environment]
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 14400
+
+[environment]
+build_timeout_sec = 600
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0
+network_mode = "public"

@@ -1,0 +1,60 @@
+{
+  "seed": 481927,
+  "model_family": "second_order_continuous_lti",
+  "gain": 1.73,
+  "natural_frequency": 12.85,
+  "damping_ratio": 0.315,
+  "experiments": [
+    {
+      "id": 1,
+      "kind": "step",
+      "dt": 0.01,
+      "n": 1201,
+      "outlier_indices": []
+    },
+    {
+      "id": 2,
+      "kind": "sine",
+      "dt": 0.008,
+      "n": 1751,
+      "outlier_indices": []
+    },
+    {
+      "id": 3,
+      "kind": "prbs",
+      "dt": 0.012,
+      "n": 1251,
+      "outlier_indices": [
+        148,
+        593,
+        710,
+        789,
+        815,
+        882,
+        1035
+      ]
+    },
+    {
+      "id": 4,
+      "kind": "chirp",
+      "dt": 0.015,
+      "n": 1067,
+      "outlier_indices": []
+    },
+    {
+      "id": 5,
+      "kind": "multistep",
+      "dt": 0.01,
+      "n": 1301,
+      "outlier_indices": [
+        118,
+        192,
+        539,
+        919,
+        992,
+        1003,
+        1137
+      ]
+    }
+  ]
+}

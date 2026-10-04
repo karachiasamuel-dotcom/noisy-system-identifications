@@ -1,0 +1,11 @@
+{
+  "model": "second_order_continuous_lti",
+  "gain": 1.7290811132406214,
+  "natural_frequency": 12.84976654337816,
+  "damping_ratio": 0.31461066452545233,
+  "gain_uncertainty": 0.0012660685458811252,
+  "frequency_uncertainty": 0.0055575774431538124,
+  "damping_uncertainty": 0.0004937230580349813,
+  "outlier_count": 11,
+  "validation_rmse": 0.055449772847776725
+}
